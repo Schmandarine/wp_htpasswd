@@ -1,0 +1,11 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile FULLPATH/.htpasswd
+Require valid-user
+
+## If Wordpress wp-admin
+<Files admin-ajax.php>
+    Order allow,deny
+    Allow from all
+    Satisfy any 
+</Files>
